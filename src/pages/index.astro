@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { highlightRoles, resumeProfile, skillGroups } from '../data/resume';
+---
+
+<BaseLayout>
+  <div class="space-y-12">
+    <section class="space-y-4">
+      <p class="eyebrow">Resume</p>
+      <h1 class="type-display text-ink">
+        {resumeProfile.name}
+      </h1>
+      <p class="type-subsection-title text-ink">{resumeProfile.headline}</p>
+      <p class="type-body max-w-3xl text-ink/72">{resumeProfile.summary}</p>
+    </section>
+
+    <section class="surface-card p-6">
+      <h2 class="type-section-title text-ink">
+        현재 집중 영역
+      </h2>
+      <ul class="type-body mt-4 space-y-2 text-ink/68">
+        {resumeProfile.currentFocus.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="type-section-title text-ink">
+        최근 하이라이트
+      </h2>
+      <div class="space-y-3">
+        {
+          highlightRoles.map((item) => (
+            <article class="surface-card p-5">
+              <p class="type-small text-ink/50">{item.period}</p>
+              <h3 class="type-card-title mt-2 text-ink">{item.title}</h3>
+              <p class="type-body mt-3 text-ink/68">{item.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="type-section-title text-ink">
+        기술 및 도구
+      </h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        {
+          skillGroups.map((group) => (
+            <article class="surface-card p-5">
+              <h3 class="type-card-title text-ink">{group.label}</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {group.items.map((item) => <span class="chip">{item}</span>)}
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="type-section-title text-ink">
+        링크
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        {
+          resumeProfile.links.map((link) => (
+            <a href={link.href} class="button-secondary type-small px-4 py-2">
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>
