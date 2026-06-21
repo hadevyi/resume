@@ -1,6 +1,10 @@
 # build output
 dist/
 
+# generated artifacts
+output/
+tmp/
+
 # generated types
 .astro/
 
