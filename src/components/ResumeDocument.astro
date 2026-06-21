@@ -318,7 +318,14 @@ const getSectionClassName = (section: (typeof orderedSections)[number]) =>
                 item === language ? (
                   <span class="resume-language-current" aria-current="true">{item.toUpperCase()}</span>
                 ) : (
-                  <a class="resume-language-link" href={languageLinks[item]} hreflang={item}>
+                  <a
+                    class="resume-language-link"
+                    href={languageLinks[item]}
+                    hreflang={item}
+                    data-resume-language-link
+                    data-resume-track={track}
+                    data-resume-language={item}
+                  >
                     {item.toUpperCase()}
                   </a>
                 )
@@ -337,6 +344,9 @@ const getSectionClassName = (section: (typeof orderedSections)[number]) =>
         href={downloadPdf}
         download
         data-print="hidden"
+        data-resume-download
+        data-resume-track={track}
+        data-resume-language={language}
         aria-label={downloadLabel}
         title={downloadLabel}
       >
@@ -371,6 +381,34 @@ const getSectionClassName = (section: (typeof orderedSections)[number]) =>
             behavior: prefersReducedMotion ? 'auto' : 'smooth'
           });
         });
+      });
+    });
+  });
+
+  const trackEvent = (eventName: string, params: Record<string, string> = {}) => {
+    const tracker = (window as Window & {
+      hadevyiTrackEvent?: (eventName: string, params?: Record<string, string>) => void;
+    }).hadevyiTrackEvent;
+
+    if (typeof tracker === 'function') {
+      tracker(eventName, params);
+    }
+  };
+
+  document.querySelectorAll('[data-resume-download]').forEach((link) => {
+    link.addEventListener('click', () => {
+      trackEvent('resume_pdf_download', {
+        resume_type: link.getAttribute('data-resume-track') || '',
+        language: link.getAttribute('data-resume-language') || ''
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-resume-language-link]').forEach((link) => {
+    link.addEventListener('click', () => {
+      trackEvent('resume_language_change', {
+        resume_type: link.getAttribute('data-resume-track') || '',
+        language: link.getAttribute('data-resume-language') || ''
       });
     });
   });
