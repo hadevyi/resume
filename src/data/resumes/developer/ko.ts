@@ -10,7 +10,7 @@ export const developerKo = {
       name: '당현아',
       headline: '공유 가능한 구조를 만드는 백엔드 개발자',
       summary:
-        'Java/Spring Boot 기반 BI·데이터 포탈 서버를 개발하고 운영합니다.\n요구사항을 API, 데이터, 협업 흐름으로 구조화해 팀이 함께 이해하고 이어갈 수 있는 형태로 만듭니다.',
+        'Java/Spring Boot 기반 BI·데이터 포탈 서버를 개발하고 운영합니다.\n요구사항을 API, 데이터, 협업 흐름으로 구조화해 팀이 함께 이해하고 이어갈 수 있도록 정리합니다.',
       currentFocus: ['Java/Spring Boot 기반 백엔드 개발', 'BI·데이터 포탈 서버 개발 및 운영', '요구사항 구조화와 협업 흐름 정리'],
       photo: {
         src: '/resume/images/developer-profile.png',
@@ -21,7 +21,7 @@ export const developerKo = {
       {
         title: 'BI·데이터 포탈 서버 개발 및 운영',
         period: '2024.01 - 현재',
-        description: 'Bigxdata Data솔루션팀에서 BI·데이터 포탈의 서버 개발, 운영, 고객사 대응을 담당하고 있습니다.'
+        description: 'Bigxdata Data솔루션팀에서 BI·데이터 포탈의 서버 개발, 운영, 고객사 대응을 맡고 있습니다.'
       },
       {
         title: '프로젝트 코칭과 실습 운영',
@@ -31,7 +31,7 @@ export const developerKo = {
       {
         title: '영상 처리 연구 개발',
         period: '2019.07 - 2019.08',
-        description: 'OpenCV와 CNN 기반 영상 배경 제거 편집기를 개발하고 성능 측정을 진행했습니다.'
+        description: 'OpenCV와 CNN 기반 영상 배경 제거 편집기를 개발하고 성능을 측정했습니다.'
       }
     ],
     skillGroups: [
@@ -64,8 +64,8 @@ export const developerKo = {
             details: [
               'Java/Spring Boot 기반 BI·데이터 포탈의 서버 기능 개발',
               '구독형 멀티모듈 구조에서 DBMS 관리 모듈 초기 구현 담당',
-              '메인 허브 유지보수와 신규 기능 개발을 수행하며 고객사 운영 조건을 서버 기능에 반영',
-              '고객사별 검증, 이슈 재현·수정, 배포, 모니터링, 보안점검 및 EOS 대응 수행',
+              '메인 허브를 유지보수하고 신규 기능을 개발하면서 고객사 운영 조건을 서버 기능에 반영',
+              '고객사별 검증부터 이슈 재현·수정, 배포, 모니터링, 보안 점검, EOS 대응까지 담당',
               '기술: Java, Spring Boot, JPA/MyBatis/QueryDSL, MySQL/MariaDB/Oracle, Swagger'
             ]
           },
@@ -75,8 +75,8 @@ export const developerKo = {
             title: '삼성청년SW아카데미 개발운영그룹 / 프로젝트 실습코치',
             description: 'SSAFY 6기·7기 교육생 대상 프로젝트 코칭 및 실습 운영',
             details: [
-              '프로젝트 수행 과정에서 요구사항 정리, 명세서 작성, 개발 방향 피드백을 지원',
-              '서버 배포와 프로젝트 운영 실습을 위한 안내 자료 개발 및 실시간 시연 진행'
+              '프로젝트 수행 과정에서 요구사항과 명세서를 정리하고 개발 방향을 검토해 피드백 제공',
+              '서버 배포와 프로젝트 운영 실습을 위한 안내 자료를 만들고 실시간으로 시연'
             ]
           },
           {
@@ -85,8 +85,8 @@ export const developerKo = {
             title: '한국전자통신연구원 / 연구연수생',
             description: 'OpenCV와 CNN을 활용한 영상 배경 제거 편집기 개발',
             details: [
-              '프레임 단위 GrabCut 적용 수동 편집기와 CNN 기반 자동 편집기 개발',
-              '편집 시간 단축과 자동 편집 성능 측정을 위한 검사기 구현',
+              '프레임 단위 GrabCut 수동 편집기와 CNN 기반 자동 편집기 개발',
+              '편집 시간을 줄이고 자동 편집 성능을 측정하기 위한 검사기 구현',
               '기술: Python, Tkinter, OpenCV, GrabCut, NumPy, Keras'
             ]
           }
@@ -98,7 +98,7 @@ export const developerKo = {
           {
             period: '2021.01 - 2021.12',
             title: '삼성청년SW아카데미 5기',
-            description: '전국 750명 최상위 5% 우수 수료'
+            description: '전국 750명 중 최상위 5% 우수 수료'
           },
           {
             period: '2016.03 - 2020.02',
@@ -166,8 +166,8 @@ export const developerKo = {
             title: '환경 및 동물 보호를 통한 지구치유 메타버스, Safers',
             description: 'Metaverse-Web / 팀 5인 / 팀장·백엔드·CI/CD·발표',
             details: [
-              '팀장으로 백엔드 API, CI/CD, ML 미션 판별 기능, 발표 담당',
-              '국립생태원·IUCN 문의와 소통을 참고해 서비스 방향을 검토하고 사용자 유입·유지 기능 구현',
+              '팀장으로서 백엔드 API, CI/CD, ML 미션 판별 기능과 발표를 담당',
+              '국립생태원·IUCN과의 문의·소통 내용을 참고해 서비스 방향을 검토하고 사용자 유입·유지 기능 구현',
               '결과: SSAFY 자율프로젝트 소속 반 1등 및 전국 입상 / Java, Spring Boot, JPA, MySQL, AWS, Jenkins'
             ]
           },
