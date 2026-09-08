@@ -9,6 +9,7 @@ export default defineConfig({
   site: 'https://hadevyi.github.io/resume/',
   base: '/resume',
   output: 'static',
+  compressHTML: true,
   vite: {
     plugins: [tailwindcss()]
   },
